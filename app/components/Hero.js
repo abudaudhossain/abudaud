@@ -1,12 +1,13 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
     return (
-        <section className="flex items-center justify-center p-8 my-20">
+        <section className="flex items-center justify-center sm:p-8 p-3 my-20 flex-col md:flex-row ">
             {/* <!-- Left side (circle box) --> */}
-            <div className="w-1/2 flex items-center justify-center">
+            <div className="w-full md:w-1/2 flex items-center justify-center">
                 <div
-                    className="w-[450px] h-[450px] rounded-full flex items-center justify-center p-4 overflow-hidden before:block before:absolute before:-inset-1 before:bg-gradient-to-r before:from-[#0b575d] before:via-[#0f2a46] before:to-[#0b575d] relative inline-block before:animate-spin-slow" style={{ boxShadow: " 0px 3px 100px 4px #054365" }}>
+                    className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-4 overflow-hidden before:block before:absolute before:-inset-1 before:bg-gradient-to-r before:from-[#0b575d] before:via-[#0f2a46] before:to-[#0b575d] relative inline-block before:animate-spin-slow" style={{ boxShadow: " 0px 3px 100px 4px #054365" }}>
                     <img className="overflow-hidden rounded-full z-10"
                         src="https://avatars.githubusercontent.com/u/73416372?v=4" alt="Abu Daud Hossain" width="100%"
                         height="100%" />
@@ -14,15 +15,16 @@ const Hero = () => {
 
             </div>
             {/* <!-- Right side (text) --> */}
-            <div className="w-1/2 pr-8">
-                <h1 className="text-4xl text-white pb-2">Hi. I'm</h1>
-                <h1 className="text-6xl font-bold text-white pb-2">Abu Daud Hossain</h1>
-                <p className="pb-2 text-2xl mb-2 max-w-[600px]">A freelance <span className="text-[#05C89A]">Full Stack Developer</span> with 3
-                    years
-                    commercial experience create successful website ...</p>
+            <div className="w-full md:w-1/2 pr-8">
+                <h1 className="text-3xl sm:text-4xl text-white pb-2">Hi. I'm</h1>
+                <h1 className="text-5xl sm:text-6xl font-bold text-white pb-2">Abu Daud Hossain</h1>
+                <p className="pb-2 text-2xl mb-2 max-w-[600px]">A freelance <span className="text-[#05C89A]">Full Stack Developer</span> with 2
+                    years commercial experience create successful website ...</p>
 
                 {/* <!-- button --> */}
-                <div className="gradient-border ">awesome</div>
+                <Link href="https://drive.google.com/file/d/1pJRCUaKiF7EIV2mCwN6HLVGMGtejMCxe/view?usp=sharing">
+                    <div className="gradient-border" >Resume</div>
+                </Link>
             </div>
         </section>
     )

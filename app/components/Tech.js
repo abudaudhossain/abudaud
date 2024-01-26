@@ -2,10 +2,10 @@ import React from 'react'
 
 const Tech = () => {
     return (
-        <section className="container md:p-8 mx-auto">
+        <section className="container md:p-8 p-3 mx-auto" id='tech'>
             <h1 className="text-2xl font-semibold text-[#05C89A] pb-2">MY SKILLS</h1>
-            <h1 className="text-6xl font-bold text-white pb-2">Technology.</h1>
-            <div className="px-20 py-12 flex flex-wrap items-center justify-center pt-10 ">
+            <h1 className="text-4xl sm:text-6xl font-bold text-white pb-2">Technology.</h1>
+            <div className="md:px-20 md:py-12 flex flex-wrap items-center justify-center pt-10 ">
                 <div>
                     <div className="tech-box text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">

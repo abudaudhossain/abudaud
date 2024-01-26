@@ -9,9 +9,9 @@ const Navbar = () => {
                 </div>
                 <div className="space-x-4 text-lg">
                     <a href="#" className="hover:text-[#05C89A] transition-colors duration-300">Home</a>
-                    <a href="#" className="hover:text-[#05C89A] transition-colors duration-300">About</a>
-                    <a href="#" className="hover:text-[#05C89A] transition-colors duration-300">Services</a>
-                    <a href="#" className="hover:text-[#05C89A] transition-colors duration-300">Contact</a>
+                    <a href="#tech" className="hover:text-[#05C89A] transition-colors duration-300">About</a>
+                    <a href="#projects" className="hover:text-[#05C89A] transition-colors duration-300">Projects</a>
+                    <a href="#contact" className="hover:text-[#05C89A] transition-colors duration-300">Contact</a>
 
                 </div>
             </div>

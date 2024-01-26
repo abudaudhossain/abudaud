@@ -48,16 +48,16 @@ export default function Home() {
       <Tech />
       <CaseStudies />
       <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4 container mx-auto'>
-        <div className=" text-white m-10">
-          <h1 className="text-4xl py-10">Experience</h1>
+        <div className="md:p-8 p-3 text-white">
+          <h1 className="text-3xl sm:text-4xl pt-8 pb-4">Experience</h1>
           <div>
             {
               workingExperiences.map((experience, i) => (<ExperienceCard key={i} experience={experience} />))
             }
           </div>
         </div>
-        <div className=" text-white m-10">
-          <h1 className="text-4xl py-10">Education History</h1>
+        <div className=" text-white md:p-8 p-3">
+          <h1 className="text-3xl sm:text-4xl pt-8 pb-4">Education History</h1>
           <div>
             {
               educationExperience.map((experience, i) => (<ExperienceCard key={i} experience={experience} />))
