@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tech = () => {
     return (
-        <section className="container md:p-8 ">
+        <section className="container md:p-8 mx-auto">
             <h1 className="text-2xl font-semibold text-[#05C89A] pb-2">MY SKILLS</h1>
             <h1 className="text-6xl font-bold text-white pb-2">Technology.</h1>
             <div className="px-20 py-12 flex flex-wrap items-center justify-center pt-10 ">
