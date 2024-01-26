@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="w-full md:w-1/2 pr-8">
                 <h1 className="text-3xl sm:text-4xl text-white pb-2">Hi. I'm</h1>
                 <h1 className="text-5xl sm:text-6xl font-bold text-white pb-2">Abu Daud Hossain</h1>
-                <p className="pb-2 text-2xl mb-2 max-w-[600px]">A freelance <span className="text-[#05C89A]">Full Stack Developer</span> with 2
+                <p className="pb-2 text-2xl mb-2 text-white  max-w-[600px]">A freelance <span className="text-[#05C89A]">Full Stack Developer</span> with 2
                     years commercial experience create successful website ...</p>
 
                 {/* <!-- button --> */}

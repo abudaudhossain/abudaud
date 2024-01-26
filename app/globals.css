@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,9 +22,10 @@ body {
 }
 
 
-a{
+a {
   transition: all 1.5s !important;
 }
+
 /* button style start */
 .gradient-border {
   --border-width: 3px;
@@ -40,28 +41,29 @@ a{
   transition: all 1.5s;
 
   &::after {
-      position: absolute;
-      content: "";
-      top: calc(-1 * var(--border-width));
-      left: calc(-1 * var(--border-width));
-      z-index: -1;
-      width: calc(100% + var(--border-width) * 2);
-      height: calc(100% + var(--border-width) * 2);
-      background: linear-gradient(60deg,
-              #000222,
-              #05C89A);
-      background-size: 300% 300%;
-      background-position: 0 50%;
-      border-radius: calc(2 * var(--border-width));
-      animation: moveGradient 4s alternate infinite;
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg,
+        #000222,
+        #05C89A);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
   }
 
   &:hover {
-      background-color: #05C89A;
+    background-color: #05C89A;
   }
 
 
 }
+
 .tech-box {
   --border-width: 3px;
   position: relative;
@@ -79,20 +81,20 @@ a{
   transition: all 1.5s;
 
   &::after {
-      position: absolute;
-      content: "";
-      top: calc(-1 * var(--border-width));
-      left: calc(-1 * var(--border-width));
-      z-index: -1;
-      width: calc(100% + var(--border-width) * 2);
-      height: calc(100% + var(--border-width) * 2);
-      background: linear-gradient(60deg,
-              #000222,
-              #05C89A);
-      background-size: 300% 300%;
-      background-position: 0 50%;
-      border-radius: calc(2 * var(--border-width));
-      animation: moveGradient 4s alternate infinite;
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg,
+        #000222,
+        #05C89A);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
   }
 
 
@@ -100,6 +102,6 @@ a{
 
 @keyframes moveGradient {
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
 }
