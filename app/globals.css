@@ -75,8 +75,8 @@ a {
   background: #1D283A;
   margin: 18px;
   /* padding: 8px 3em; */
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   border-radius: var(--border-width);
   transition: all 1.5s;
 

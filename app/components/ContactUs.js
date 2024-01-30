@@ -10,8 +10,8 @@ const ContactUs = () => {
             <h1 className="text-4xl sm:text-6xl font-bold text-white pb-2">Contacts Me.</h1>
             <p className="max-w-[1000px] text-xl">If I can be of assistance, please do not hesitate to contact me <br/>
 And I will give you my best.</p>
-            <div className='grid grid-cols-1 md:grid-cols-3 md:gap-4 pt-8'>
-                <div className='pb-4 col-span-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 md:gap-4 pt-8'>
+                <div className='pb-4 sm:col-span-2 md:col-span-1'>
                     <form action="https://formsubmit.co/dbf74f829bccac24fc1b8f59a048d6e9 " method="POST">
                         <div>
 
