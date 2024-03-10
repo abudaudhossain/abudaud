@@ -22,7 +22,7 @@ const Hero = () => {
                     years commercial experience create successful website ...</p>
 
                 {/* <!-- button --> */}
-                <Link href="https://drive.google.com/file/d/1pJRCUaKiF7EIV2mCwN6HLVGMGtejMCxe/view?usp=sharing">
+                <Link href="https://drive.google.com/file/d/1hSNZO53JjUDwN_O-44sLmNFnPS2sEopr/view?usp=sharing">
                     <div className="gradient-border" >Resume</div>
                 </Link>
             </div>
