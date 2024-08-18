@@ -65,7 +65,7 @@ const Projects = () => {
     return (
         <section className="pt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6" id='projects'>
             {
-                projects.map((project, i) => <div key={i} className={`bg-cover bg-center bg-red-400 z-10 h-[450px] relative  rounded-2xl ${isSpan == i && 'md:col-span-2'}`} onClick={() => spanHandler(i)} style={{ backgroundImage: `${project.image && `url(${project.image})`}` }}>
+                projects.map((project, i) => <div key={i + project.title} className={`bg-cover bg-center bg-red-400 z-10 h-[450px] relative  rounded-2xl ${isSpan == i && 'md:col-span-2'}`} onClick={() => spanHandler(i)} style={{ backgroundImage: `${project.image && `url(${project.image})`}` }}>
                     <div className="absolute inset-0 bg-opacity-50 bg-[#202124]"></div>
                     <h1 className={`text-2xl sm:text-4xl font-semibold rotate-[-90deg] absolute bottom-[100px] hidden sm:block sm:right-[-40px]  ${isSpan == i && 'sm:hidden'} `}>{project.title}</h1>
                     <div className={`${isSpan != i && 'sm:hidden'} bg-[#00022270] p-8 bottom-0 absolute`}>
@@ -78,11 +78,11 @@ const Projects = () => {
                         <div className='text-base mb-3 flex flex-wrap items-center'>
                             <p className='font-semibold pe-3'>Tools:</p>
                             {
-                                project.tools.map(tool => <p class="bg-[#1D283A] text-sm font-medium px-2.5 py-0.5 m-1 rounded dark:bg-blue-900 dark:text-blue-300">{tool}</p>
+                                project.tools.map(tool => <p key={tool} className="bg-[#1D283A] text-sm font-medium px-2.5 py-0.5 m-1 rounded dark:bg-blue-900 dark:text-blue-300">{tool}</p>
                                 )
                             }
                         </div>
-                        <h1 className='text-lg font-semibold mb-2'>Role: <span class="bg-[#1D283A] px-2.5 py-1 m-1 rounded dark:bg-blue-900 dark:text-blue-300">{project.role}</span></h1>
+                        <h1 className='text-lg font-semibold mb-2'>Role: <span className="bg-[#1D283A] px-2.5 py-1 m-1 rounded dark:bg-blue-900 dark:text-blue-300">{project.role}</span></h1>
                         <div className='flex justify-between'>
                             <Link href={project.live}>
                                 <div className="gradient-border font-semibold">LIVE DEMO</div>
