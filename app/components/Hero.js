@@ -45,7 +45,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
                         duration: 0.3,
-                        delay: 0.3
+                        delay: 0.3,
                     }}
                     className="text-3xl sm:text-4xl text-white pb-2"
                 >
@@ -75,16 +75,18 @@ const Hero = () => {
                     <span className="text-[#05C89A]">{<TextAnimation />}</span>
                 </motion.p>
                 <motion.p
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{
-                     duration: 0.3,
-                     delay: 1.2
-                 }}
-                className="pb-2 text-xl mb-2 text-white  max-w-[600px]">
-                    With 2 years of experience in Node JS backend development, I
-                    have developed secure, reliable REST APIs for mobile and web
-                    applications using the Express JS framework.
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.3,
+                        delay: 1.2,
+                    }}
+                    className="pb-2 text-xl mb-2 text-white  max-w-[600px]"
+                >
+                    With 2 years of experience in web development, I have
+                    designed and developed web applications using React JS and
+                    Node JS, implemented web application architecture, optimized
+                    code for performance, scalability and reliability
                 </motion.p>
 
                 {/* <!-- button --> */}
@@ -93,7 +95,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
                         duration: 0.3,
-                        delay: 1.5
+                        delay: 1.5,
                     }}
                 >
                     <Link href="https://drive.google.com/file/d/1hSNZO53JjUDwN_O-44sLmNFnPS2sEopr/view?usp=sharing">
