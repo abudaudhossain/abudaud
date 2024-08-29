@@ -80,14 +80,14 @@ let projects = [
     },
     {
         id: 5,
-        image: null,
+        image: 'https://res.cloudinary.com/dkioxcw3q/image/upload/v1724942800/lead_hkw2ek.jpg',
         title: "Lead Management",
         shortDescription: null,
         description:
-            "These projects demonstrate my expertise with practical examples of some of my work, including brief descriptions and links to code repositories and live demos.",
+            "Developed and implemented backend functionalities for lead creation, tracking, and management, including tools for quotations and invoices with support for partial payments and financial tracking.",
         role: "Backend Developer",
         tools: ["NodeJS", "MongoDB", "ExpressJS", "Mongoose", "multer", "JWT"],
-        live: "#",
+        live: "https://lead-management-taupe.vercel.app/",
     },
 ];
 const Projects = () => {
