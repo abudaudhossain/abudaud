@@ -98,7 +98,7 @@ const Hero = () => {
                         delay: 1.5,
                     }}
                 >
-                    <Link href="https://drive.google.com/file/d/1hSNZO53JjUDwN_O-44sLmNFnPS2sEopr/view?usp=sharing">
+                    <Link href="https://drive.google.com/file/d/1hSNZO53JjUDwN_O-44sLmNFnPS2sEopr/view?usp=sharing"  target="_blank">
                         <motion.div
                             whileHover={{
                                 scale: 1.1,

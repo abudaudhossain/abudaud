@@ -45,7 +45,7 @@ export default function Home() {
     <main className='mx-auto'>
       <Navbar />
       <Hero />
-      <Tech />
+      {/* <Tech /> */}
       <CaseStudies />
       <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4 container mx-auto'>
         <div className="md:p-8 p-3 text-white">
