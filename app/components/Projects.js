@@ -111,7 +111,7 @@ const Projects = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.9,
-        delay: 1.3,
+        delay: 1,
       }}
       className="pt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6"
       id="projects"
