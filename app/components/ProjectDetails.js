@@ -22,63 +22,30 @@ const ProjectDetails = ({ show = false, onClose, project }) => {
           >
             {/* Close Button */}
             <div className="flex justify-end">
-              <span onClick={onClose} className="cursor-pointer font-bold mb-3 text-white">
+              <span
+                onClick={onClose}
+                className="cursor-pointer font-bold mb-3 text-white"
+              >
                 Close
               </span>
             </div>
-            
+
             {/* Modal Content */}
             <div className="space-y-4">
               {/* Image Section */}
               <div className="w-full h-[500px] relative">
-                <Image src={project.image} fill alt={project.title} className="object-cover rounded" />
+                <Image
+                  src={project.image}
+                  fill
+                  alt={project.title}
+                  className="object-cover rounded"
+                />
               </div>
-              
+
               {/* Title and Description */}
               <div className="pt-2 text-white">
                 <h1 className="text-2xl font-semibold">{project.title}</h1>
                 <p className="text-gray-300">{project.description}</p>
-                
-                {/* Extra Content (Sample Text) */}
-                <p className="text-gray-300 mt-4">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s...
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s...
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s...
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s...
-                </p>
-                <p className="text-gray-300 mt-4">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but also the leap into
-                  electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply
-                  dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry’s standard dummy text ever since the 1500s...
-                </p>
               </div>
             </div>
           </div>
