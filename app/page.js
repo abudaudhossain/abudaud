@@ -8,14 +8,13 @@ import ContactUs from '@/app/components/ContactUs'
 
 let workingExperiences = [
   {
-    title: "Junior Backend Developer",
+    title: "Software Engineer",
     institute: "Singularity Limited",
     duration: "Dec 2022 - Current",
     description: [
-      "Implemented scalable REST APIs to support a high volume of concurrent users, resulting in a 50% increase in system performance and improved user experience.",
-      "Developed and implemented a highly efficient database architecture that streamlined data retrieval and storage processes, resulting in a 40% reduction in query response time and enhanced system performance.",
-      "Added enhancements/features, fixed bugs and optimized existing applications",
-      "Enabling seamless integration with third-party platforms."
+      "Designed and developed REST API and Implementing different third-party packages",
+      "Application maintenance, bug fixes, and adding new features like SMS integration auto mailing, payment methods",
+      "Design database and write optimized DB query"
     ]
   }
 ]
@@ -26,7 +25,6 @@ let educationExperience = [
     duration: "Aug 2022 - Current",
     description: [
       "Studies B.Sc in (CSE) Computer Science & Engineering at Dhaka International University - DIU",
-
     ]
   },
   {
@@ -35,7 +33,6 @@ let educationExperience = [
     duration: "Aug 2017 - Aug 2021",
     description: [
       "I have completed my \"Diploma in computer engineering\" course from Kurigram Polytechnic Institute.",
-
     ]
   }
 ]
