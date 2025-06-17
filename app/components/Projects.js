@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import { event } from "../lib/gtag";
 
 let projects = [
   {
@@ -122,7 +123,15 @@ const Projects = () => {
           className={`bg-cover bg-center bg-red-400 z-10 h-[450px] relative  rounded-2xl ${
             isSpan == i && "md:col-span-2"
           }`}
-          onClick={() => spanHandler(i)}
+          onClick={() => {
+            spanHandler(i);
+            event({
+              action: "click",
+              category: "Project",
+              label: "See Project",
+              value: project.title,
+            });
+          }}
           style={{
             backgroundImage: `${project.image && `url(${project.image})`}`,
           }}
@@ -166,12 +175,31 @@ const Projects = () => {
               </span>
             </h1>
             <div className="flex justify-between">
-              <Link href={project.live}>
+              <Link
+                href={project.live}
+                target="_blank"
+                onClick={() =>
+                  event({
+                    action: "click",
+                    category: "Project",
+                    label: "Live Demo",
+                    value: project.title,
+                  })
+                }
+              >
                 <div className="gradient-border font-semibold">LIVE DEMO</div>
               </Link>
               <div
                 className="gradient-border font-semibold "
-                onClick={() => openModal(project)}
+                onClick={() => {
+                  openModal(project);
+                  event({
+                    action: "click",
+                    category: "Project",
+                    label: "See Project Details",
+                    value: project.title,
+                  });
+                }}
               >
                 DETAILS
               </div>
