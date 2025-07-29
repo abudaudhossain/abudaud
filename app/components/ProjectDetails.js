@@ -1,58 +1,82 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 const ProjectDetails = ({ show = false, onClose, project }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [animateOut, setAnimateOut] = useState(false);
+
+  useEffect(() => {
+    if (show) {
+      setIsVisible(true);
+      setAnimateOut(false);
+      document.body.style.overflow = "hidden";
+    } else if (isVisible) {
+      setAnimateOut(true);
+      setTimeout(() => {
+        setIsVisible(false);
+        document.body.style.overflow = "auto";
+      }, 300); // match animation duration
+    }
+    return () => (document.body.style.overflow = "auto");
+  }, [show]);
+
+  const handleClose = () => {
+    setAnimateOut(true);
+    setTimeout(() => {
+      onClose();
+    }, 300); // match animation duration
+  };
+
+  if (typeof window === "undefined" || !isVisible) return null;
+
   return ReactDOM.createPortal(
-    <div className={`modal absolute ${show ? "" : "scale-0"}`}>
-      {/* Modal Overlay */}
+    <div
+      className={`fixed inset-0 z-[999] flex items-center justify-center transition-all duration-300 `}
+      role="dialog"
+      aria-hidden={!show}
+    >
+      {/* Overlay */}
       <div
-        className="fixed z-[999] top-0 bottom-0 left-0 right-0 bg-[#00022250]"
-        onClick={onClose}
-      >
-        {/* Modal Content */}
-        <div
-          className={`fixed flex w-full h-full items-center justify-center duration-300 ${
-            show ? "top-0" : "-top-50"
+        className="absolute inset-0 bg-black/10 backdrop-blur-sm"
+        onClick={handleClose}
+      />
+
+      {/* Modal Box */}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`relative z-10 bg-[#1D283A] text-white rounded-xl shadow-xl p-6 max-w-3xl w-[90vw] max-h-[90vh] overflow-y-auto ${animateOut ? "animate-fadeOut" : "animate-fadeIn"
           }`}
+      >
+        {/* Close Button */}
+        <button
+          onClick={handleClose}
+          className="absolute top-3 right-4 text-sm font-semibold text-gray-200 hover:text-white"
         >
-          <div
-            className="relative bg-[#1D283A] rounded-lg p-5 max-w-[90vw] max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
-          >
-            {/* Close Button */}
-            <div className="flex justify-end">
-              <span
-                onClick={onClose}
-                className="cursor-pointer font-bold mb-3 text-white"
-              >
-                Close
-              </span>
-            </div>
+          ✕
+        </button>
 
-            {/* Modal Content */}
-            <div className="space-y-4">
-              {/* Image Section */}
-              <div className="w-full h-[500px] relative">
-                <Image
-                  src={project.image}
-                  fill
-                  alt={project.title}
-                  className="object-cover rounded"
-                />
-              </div>
+        {/* Content */}
+        <div className="space-y-6 mt-6">
+          {/* Image */}
+          <div className="w-full h-[400px] relative rounded-lg overflow-hidden">
+            <Image
+              src={project?.image || "/fallback.jpg"}
+              alt={project?.title || "Project Image"}
+              fill
+              className="object-cover"
+            />
+          </div>
 
-              {/* Title and Description */}
-              <div className="pt-2 text-white">
-                <h1 className="text-2xl font-semibold">{project.title}</h1>
-                <p className="text-gray-300">{project.description}</p>
-              </div>
-            </div>
+          {/* Title & Description */}
+          <div>
+            <h2 className="text-2xl font-bold mb-2">{project?.title}</h2>
+            <p className="text-gray-300">{project?.description}</p>
           </div>
         </div>
       </div>
     </div>,
-    document.querySelector("#modal") // Portal to render modal into
+    document.getElementById("modal")
   );
 };
 
