@@ -22,6 +22,7 @@ const Navbar = () => {
                         type: "spring",
                         stiffness: 120,
                     }}
+                    viewport={{ once: true }}
                     className="text-2xl"
                 >
                     <a href="#" className="text-[#05C89A]">
@@ -39,6 +40,7 @@ const Navbar = () => {
                         delay: 0.3,
                         duration: 3,
                     }}
+                    viewport={{ once: true }}
                     className="space-x-4 text-lg"
                 >
                     <a

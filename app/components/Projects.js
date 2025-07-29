@@ -114,6 +114,7 @@ const Projects = () => {
         duration: 0.9,
         delay: 1,
       }}
+      viewport={{ once: true }}
       className="pt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6"
       id="projects"
     >
@@ -157,7 +158,7 @@ const Projects = () => {
                 ? project.shortDescription
                 : project.description}
             </p>
-            <div className="text-base mb-3 flex flex-wrap items-center">
+            {/* <div className="text-base mb-3 flex flex-wrap items-center">
               <p className="font-semibold pe-3">Tools:</p>
               {project.tools.map((tool) => (
                 <p
@@ -167,7 +168,7 @@ const Projects = () => {
                   {tool}
                 </p>
               ))}
-            </div>
+            </div> */}
             <h1 className="text-lg font-semibold mb-2">
               Role:{" "}
               <span className="bg-[#1D283A] px-2.5 py-1 m-1 rounded dark:bg-blue-900 dark:text-blue-300">

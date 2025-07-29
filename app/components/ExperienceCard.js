@@ -13,6 +13,7 @@ function ExperienceCard({ experience }) {
                     duration: 0.6,
                     delay: 0.3,
                 }}
+                viewport={{ once: true }}
                 className="text-2xl font-semibold"
             >
                 {title}
@@ -24,6 +25,7 @@ function ExperienceCard({ experience }) {
                     duration: 0.6,
                     delay: 0.6,
                 }}
+                viewport={{ once: true }}
                 className="font-semibold text-base text-slate-300"
             >
                 {institute}{" "}
@@ -38,6 +40,7 @@ function ExperienceCard({ experience }) {
                     duration: 0.6,
                     delay: 0.9,
                 }}
+                viewport={{ once: true }}
                 className="mt-3"
             >
                 {description.map((item, i) => (

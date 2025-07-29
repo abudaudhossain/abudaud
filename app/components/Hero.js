@@ -24,6 +24,7 @@ const Hero = () => {
               restDelta: 0.001,
             },
           }}
+          viewport={{ once: true }}
         >
           <div
             className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-4 overflow-hidden before:block before:absolute before:-inset-1 before:bg-gradient-to-r before:from-[#0b575d] before:via-[#0f2a46] before:to-[#0b575d] relative inline-block before:animate-spin-slow"
@@ -48,6 +49,7 @@ const Hero = () => {
             duration: 0.3,
             delay: 0.3,
           }}
+          viewport={{ once: true }}
           className="text-3xl sm:text-4xl text-white pb-2"
         >
           Hi. <span className="text-[#05C89A]">I'm👋🏼</span>
@@ -59,6 +61,7 @@ const Hero = () => {
             duration: 0.3,
             delay: 0.6,
           }}
+          viewport={{ once: true }}
           className="text-5xl sm:text-6xl font-bold text-white pb-2"
         >
           Abu Daud Hossain
@@ -70,6 +73,7 @@ const Hero = () => {
             duration: 0.3,
             delay: 0.9,
           }}
+          viewport={{ once: true }}
           className="pb-2 text-2xl mb-2 text-white  max-w-[600px]"
         >
           I'm a <span className="text-[#05C89A]">{<TextAnimation />}</span>
@@ -81,9 +85,10 @@ const Hero = () => {
             duration: 0.3,
             delay: 1.2,
           }}
+          viewport={{ once: true }}
           className="pb-2 text-xl mb-2 text-white  max-w-[600px]"
         >
-          With 2 years of experience in web development, I have designed and
+          With 3 years of experience in web development, I have designed and
           developed web applications using React JS and Node JS, implemented web
           application architecture, optimized code for performance, scalability
           and reliability
@@ -97,6 +102,7 @@ const Hero = () => {
             duration: 0.3,
             delay: 1.5,
           }}
+          viewport={{ once: true }}
         >
           <Link
             href="https://drive.google.com/file/d/1hSNZO53JjUDwN_O-44sLmNFnPS2sEopr/view?usp=sharing"
@@ -119,6 +125,7 @@ const Hero = () => {
               transition={{
                 duration: 0.1,
               }}
+              viewport={{ once: true }}
               className="gradient-border"
             >
               Resume

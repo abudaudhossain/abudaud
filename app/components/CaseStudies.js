@@ -13,6 +13,7 @@ const CaseStudies = () => {
                     duration: 0.3,
                     delay: 0.3,
                 }}
+                viewport={{ once: true }}
                 className="text-2xl font-semibold text-[#05C89A] pb-2"
             >
                 CASE STUDIES
@@ -24,6 +25,7 @@ const CaseStudies = () => {
                     duration: 0.3,
                     delay: 0.6,
                 }}
+                viewport={{ once: true }}
                 className="text-4xl sm:text-6xl font-bold text-white pb-2"
             >
                 Projects.
@@ -35,7 +37,7 @@ const CaseStudies = () => {
                 duration: 0.3,
                 delay: 0.9
             }}
-            
+            viewport={{ once: true }}
             className="max-w-[1000px] text-base sm:text-xl">
                 These projects demonstrate my expertise with practical examples
                 of some of my work, including brief descriptions and links to

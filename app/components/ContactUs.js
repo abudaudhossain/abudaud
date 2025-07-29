@@ -15,6 +15,7 @@ const ContactUs = () => {
                             duration: 0.6,
                             delay: 0.3,
                         }}
+                        viewport={{ once: true }}
                         className="text-4xl font-bold text-white pb-2"
                     >
                         Contacts Me.
@@ -26,6 +27,7 @@ const ContactUs = () => {
                             duration: 0.6,
                             delay: 0.6,
                         }}
+                        viewport={{ once: true }}
                         className="max-w-[1000px] text-xl mb-6"
                     >
                         If I can be of assistance, please do not hesitate to
@@ -40,6 +42,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 0.9,
                             }}
+                            viewport={{ once: true }}
                             className="font-bold"
                         >
                             Email
@@ -51,6 +54,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 1.2,
                             }}
+                            viewport={{ once: true }}
                             className="text-gray-500 dark:text-gray-400 font-semibold pb-2"
                         >
                             abudaud.web@gmail.com
@@ -64,6 +68,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 1.5,
                             }}
+                            viewport={{ once: true }}
                             className="font-bold"
                         >
                             Phone
@@ -75,6 +80,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 1.8,
                             }}
+                            viewport={{ once: true }}
                             className="text-gray-500 dark:text-gray-400 font-semibold pb-2"
                         >
                             +880 1994589676
@@ -88,6 +94,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 2.1,
                             }}
+                            viewport={{ once: true }}
                             className="font-bold"
                         >
                             Address
@@ -99,6 +106,7 @@ const ContactUs = () => {
                                 duration: 0.6,
                                 delay: 2.3,
                             }}
+                            viewport={{ once: true }}
                             className="text-gray-500 dark:text-gray-400 font-semibold pb-2"
                         >
                             Dhaka, Bangladesh

@@ -139,6 +139,7 @@ const Tech = () => {
                     duration: 0.3,
                     delay: 2,
                 }}
+                viewport={{ once: true }}
                 className="text-2xl font-semibold text-[#05C89A] pb-2"
             >
                 MY SKILLS
@@ -150,6 +151,7 @@ const Tech = () => {
                     duration: 0.3,
                     delay: 2.3,
                 }}
+                viewport={{ once: true }}
                 className="text-4xl sm:text-6xl font-bold text-white pb-2"
             >
                 Technology.
@@ -163,6 +165,7 @@ const Tech = () => {
                             duration: 0.3,
                             delay: 0.3 
                         }}
+                        viewport={{ once: true }}
                         key={i}
                         className="tech-box text-center"
                     >
