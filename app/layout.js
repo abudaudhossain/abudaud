@@ -17,6 +17,9 @@ export const metadata = {
     "Nodejs developer",
     "React developer",
     "Frontend Developer",
+    "Software Engineer",
+    "Software Developer",
+    "Software Developer",
   ],
   openGraph: {
     images: "https://avatars.githubusercontent.com/u/73416372?v=4",
