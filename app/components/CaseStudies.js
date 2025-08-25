@@ -5,7 +5,7 @@ import Projects from "./Projects";
 
 const CaseStudies = () => {
     return (
-        <section className="container md:p-8 p-3 mx-auto ">
+        <section id="projects" className="container md:p-8 p-3 mx-auto ">
             <motion.h1
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

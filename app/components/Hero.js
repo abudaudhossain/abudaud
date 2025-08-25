@@ -27,7 +27,7 @@ const Hero = () => {
           viewport={{ once: true }}
         >
           <div
-            className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-4 overflow-hidden before:block before:absolute before:-inset-1 before:bg-gradient-to-r before:from-[#0b575d] before:via-[#0f2a46] before:to-[#0b575d] relative inline-block before:animate-spin-slow"
+            className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-4 overflow-hidden before:block before:absolute before:-inset-1 before:bg-gradient-to-r before:from-[#0b575d] before:via-[#0f2a46] before:to-[#0b575d] relative before:animate-spin-slow"
             style={{ boxShadow: " 0px 3px 100px 4px #054365" }}
           >
             <img

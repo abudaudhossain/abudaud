@@ -116,7 +116,7 @@ const Projects = () => {
       }}
       viewport={{ once: true }}
       className="pt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6"
-      id="projects"
+   
     >
       {projects.map((project, i) => (
         <div
