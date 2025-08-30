@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import React, { useState } from "react";
-import ProjectDetails from "./ProjectDetails";
-import { event } from "../lib/gtag";
+import React, { useRef, useState } from "react";
+
+import Project from "./Project";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 let projects = [
   {
@@ -88,134 +90,76 @@ let projects = [
   },
 ];
 const Projects = () => {
-  const [isSpan, setIsSpan] = useState(1);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const spanHandler = (id) => {
-    setIsSpan(id);
+  const swiperRef = useRef(null);
+
+  const [swiperIndex, setSwiperIndex] = useState(0);
+
+  const goToNextSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
   };
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  // Function to close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
+  const goToPrevSlide = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev();
+    }
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.9,
-        delay: 1,
-      }}
-      viewport={{ once: true }}
-      className="pt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6"
-   
-    >
-      {projects.map((project, i) => (
+    <motion.div
+      // initial={{ opacity: 0, y: 60 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{
+      //   type: "tween",
+      //   duration: 0.4,
+      //   delay: 0.6,
+      // }}
+      // viewport={{ once: true }}
+      className='container pt-10 md:pt-20'>
+      <Swiper
+        spaceBetween={30}
+        loop={true}
+        slidesPerView={3}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        ref={swiperRef}
+        className="overflow-hidden"
+      >
+        {projects?.map((project, index) => {
+          return (
+            <SwiperSlide key={index} className="relative group">
+              <Project cat={project} />
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
+
+      <div className="flex justify-center gap-4 z-10 mt-10">
         <div
-          key={i + project.title}
-          className={`bg-cover bg-center bg-red-400 z-10 h-[450px] relative  rounded-2xl ${
-            isSpan == i && "md:col-span-2"
-          }`}
-          onClick={() => {
-            spanHandler(i);
-            event({
-              action: "click",
-              category: "Project",
-              label: "See Project",
-              value: project.title,
-            });
-          }}
-          style={{
-            backgroundImage: `${project.image && `url(${project.image})`}`,
-          }}
+          className="cursor-pointer bg-transparent hover:bg-[#cf969225] border border-[#D9D4D4] p-2 md:p-4 text-[#05C89A] rounded-full hover:text-[#05C89A] transition"
+          onClick={goToPrevSlide}
         >
-          <div className="absolute inset-0 bg-opacity-50 bg-[#202124]"></div>
-          <h1
-            className={`text-2xl sm:text-4xl font-semibold rotate-[-90deg] absolute bottom-[100px] hidden sm:block sm:right-[-40px]  ${
-              isSpan == i && "sm:hidden"
-            } `}
-          >
-            {project.title}
-          </h1>
-          <div
-            className={`${
-              isSpan != i && "sm:hidden"
-            } bg-[#00022270] p-8 bottom-0 absolute`}
-          >
-            <h1 className={`text-xl sm:text-3xl font-semibold pb-2`}>
-              {project.title}
-            </h1>
-            <p className="pb-2">
-              {project.shortDescription
-                ? project.shortDescription
-                : project.description}
-            </p>
-            {/* <div className="text-base mb-3 flex flex-wrap items-center">
-              <p className="font-semibold pe-3">Tools:</p>
-              {project.tools.map((tool) => (
-                <p
-                  key={tool}
-                  className="bg-[#1D283A] text-sm font-medium px-2.5 py-0.5 m-1 rounded dark:bg-blue-900 dark:text-blue-300"
-                >
-                  {tool}
-                </p>
-              ))}
-            </div> */}
-            <h1 className="text-lg font-semibold mb-2">
-              Role:{" "}
-              <span className="bg-[#1D283A] px-2.5 py-1 m-1 rounded dark:bg-blue-900 dark:text-blue-300">
-                {project.role}
-              </span>
-            </h1>
-            <div className="flex justify-between">
-              <Link
-                href={project.live}
-                target="_blank"
-                onClick={() =>
-                  event({
-                    action: "click",
-                    category: "Project",
-                    label: "Live Demo",
-                    value: project.title,
-                  })
-                }
-              >
-                <div className="gradient-border font-semibold">LIVE DEMO</div>
-              </Link>
-              <div
-                className="gradient-border font-semibold "
-                onClick={() => {
-                  openModal(project);
-                  event({
-                    action: "click",
-                    category: "Project",
-                    label: "See Project Details",
-                    value: project.title,
-                  });
-                }}
-              >
-                DETAILS
-              </div>
-            </div>
-          </div>
-          {isModalOpen && (
-            <ProjectDetails
-              onClose={closeModal}
-              show={isModalOpen}
-              project={selectedProject}
-            />
-          )}
+          <FaArrowLeft className="text-xl " />
         </div>
-      ))}
-    </motion.section>
+
+        <div
+          className="cursor-pointer bg-transparent hover:bg-[#cf969225] border border-[#D9D4D4] p-2 md:p-4 text-[#05C89A] rounded-full hover:text-[#05C89A] transition"
+          onClick={goToNextSlide}
+        >
+          <FaArrowRight className="text-xl " />
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
