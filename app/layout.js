@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Analytics from "./components/Analytics";
+import LoaderWrapper from "./components/LoaderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,7 +53,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div id="modal"></div>
         <Analytics />
-        {children}
+        <LoaderWrapper>{children}</LoaderWrapper>
         <div id="modal" />
 
       </body>

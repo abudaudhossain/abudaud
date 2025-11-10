@@ -107,3 +107,47 @@ a {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000222;
+    z-index: 9999;
+}
+
+
+.page-loader__text {
+    margin-top: 24px;
+    font-size: 32px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #05c89a, #36e4d8, #05c89a);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: page-loader-text 2.4s ease-in-out infinite;
+}
+
+.page-content {
+    transition: opacity 0.3s ease;
+}
+
+.page-content--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+@keyframes page-loader-text {
+    0%, 100% {
+        opacity: 0.3;
+        letter-spacing: 0.15em;
+    }
+    50% {
+        opacity: 1;
+        letter-spacing: 0.25em;
+    }
+}
