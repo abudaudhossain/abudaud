@@ -118,7 +118,7 @@ const Project = ({ cat }) => {
                                     )}
                                 </div>
 
-                                <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1 footer-content">
+                                <div className="flex flex-col  xl:flex-row xl:items-center gap-3 pt-1 footer-content">
                                     {cat.live && (
                                         <Link
                                             href={cat.live}
