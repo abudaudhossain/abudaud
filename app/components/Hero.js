@@ -94,7 +94,7 @@ const Hero = () => {
           >
             {[
               { label: "Production launches", value: "20+" },
-              { label: "Startup partners", value: "12" },
+              { label: "Happy clients", value: "12" },
               { label: "Experience", value: "3+ yrs" },
             ].map((stat) => (
               <div
