@@ -156,26 +156,35 @@ const Tech = () => {
             >
                 Technology.
             </motion.h1>
-            <div className="md:px-20 md:py-12 grid xl:grid-cols-7 lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 pt-10 justify-center ">
+            <div className="md:px-20 md:py-12 grid xl:grid-cols-7 lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 pt-10 justify-center gap-3">
                 {techs.map((tech, i) => (
                     <motion.div
-                        initial={{ opacity: 0, y: 200 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                            duration: 0.3,
-                            delay: 0.3 
-                        }}
-                        viewport={{ once: true }}
                         key={i}
-                        className="tech-box text-center"
+                        initial={{ opacity: 0, y: 80, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.45, delay: 0.05 * i, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        className="group relative flex flex-col items-center rounded-2xl border border-white/10 bg-white/[0.06] px-6 py-7 text-center shadow-lg shadow-black/30 backdrop-blur-md transition-all duration-300 hover:border-[#05C89A] hover:bg-[#05C89A]/20"
                     >
-                        <Image
-                            src={tech.image}
-                            width={60}
-                            height={60}
-                            className="mx-auto mt-4"
-                        />
-                        <p className="font-bold text-sm py-2">{tech.title}</p>
+                        <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#05C89A]/25 via-transparent to-transparent blur-xl" />
+                        </div>
+                        <div className="relative flex h-16 w-16 items-center justify-center rounded-xl bg-white/[0.12] shadow-inner shadow-black/30">
+                            <Image
+                                src={tech.image}
+                                width={54}
+                                height={54}
+                                alt={tech.title}
+                                className="h-14 w-14 object-contain drop-shadow-[0_8px_20px_rgba(5,200,154,0.45)]"
+                            />
+                        </div>
+                        <p className="relative mt-4 text-base font-semibold text-white tracking-wide">
+                            {tech.title}
+                        </p>
+                        <span className="relative mt-2 text-xs uppercase tracking-[0.4em] text-white/50">
+                            Expertise
+                        </span>
                     </motion.div>
                 ))}
             </div>
